@@ -1,0 +1,30 @@
+{
+  "author": "Sarim Chaudhry",
+  "github_id": "Sarimsaljook",
+  "name": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT",
+  "blurb": "Novel multi-pass streaming score-first TTT: 3 independent adaptation trajectories with shifted data orderings, min NLL per token. Every token scored under torch.inference_mode before training. Built on PR#518/#414 stack (11L, XSA4, LeakyReLU(0.5)², Partial RoPE 16/64, LN Scale, VE128, EMA(0.997), Late QAT@0.15, Tight SWA, SmearGate, BigramHash, GPTQ-lite, int6+zstd-22). Includes Rotary cache clone fix enabling TTT backprop through partial RoPE.",
+  "date": "2026-03-23T00:00:00Z",
+  "val_loss": 1.77670043,
+  "val_bpb": 1.05229749,
+  "val_bpb_seeds": {
+    "1337": 1.05185315,
+    "42": 1.05434034,
+    "2024": 1.05067897
+  },
+  "val_bpb_mean": 1.0523,
+  "val_bpb_std": 0.0018,
+  "pre_quant_val_loss": 1.9605,
+  "pre_quant_val_bpb": 1.1611,
+  "post_quant_val_loss": 1.9774,
+  "post_quant_val_bpb": 1.1711,
+  "step_stop": 4197,
+  "wallclock_seconds": 601.087,
+  "eval_time_seconds": 88.649,
+  "bytes_total": 15933972,
+  "bytes_model_int6_zstd": 15861896,
+  "bytes_code": 72076,
+  "legal_ttt": true,
+  "ttt_passes": 3,
+  "ttt_lr": 0.0005,
+  "model_params": 26993756
+}
